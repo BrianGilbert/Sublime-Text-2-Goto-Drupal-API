@@ -11,7 +11,7 @@ def open_url(url):
 
 
 # Open the URL in the current selection
-class OpenDrupalapiCommand(sublime_plugin.TextCommand):
+class GotoDrupalapiCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         for region in self.view.sel():
             word = self.view.word(region)
