@@ -1,13 +1,9 @@
-import sublime
 import sublime_plugin
-
+import webbrowser
 
 # -------------------------------------------
 # { "keys": ["super+shift+a"], "command": "open_drupalapi" }
 # -------------------------------------------
-
-def open_url(url):
-    sublime.active_window().run_command('open_url', {"url": url})
 
 
 # Open the URL in the current selection
@@ -18,4 +14,4 @@ class GotoDrupalapiCommand(sublime_plugin.TextCommand):
             if not word.empty():
                 word = self.view.word(region)
                 keyword = self.view.substr(word)
-                open_url("http://api.drupal.org/api/search/7/%s" % keyword)
+                webbrowser.open_new_tab("http://api.drupal.org/api/search/7/%s" % keyword)
