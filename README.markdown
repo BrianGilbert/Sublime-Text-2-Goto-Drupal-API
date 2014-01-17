@@ -1,4 +1,4 @@
-# Sublime Text 2 plugin: Goto Drupal API
+# Sublime Text 2/3 plugin: Goto Drupal API
 
 A command to jump to documentation for the current word.
 
